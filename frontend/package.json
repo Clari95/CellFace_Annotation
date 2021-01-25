@@ -1,0 +1,72 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@johmun/vue-tags-input": "^2.1.0",
+    "ajv-keywords": "^3.5.1",
+    "axios": "^0.19.0",
+    "chart.js": "^2.9.3",
+    "colormap": "^2.3.1",
+    "confetti": "^1.0.16",
+    "core-js": "^3.3.2",
+    "howler": "^2.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "serve": "^11.3.0",
+    "vue": "^2.6.10",
+    "vue-chartjs": "^3.5.0",
+    "vue-router": "^3.1.3",
+    "vue-ruler": "^1.0.5",
+    "vue-upload-component": "^2.8.20",
+    "vue-upload-with-credential": "^2.8.21",
+    "vue-zoomer": "^0.3.6",
+    "vuetify": "^2.1.0",
+    "vuex": "^3.1.3",
+    "webpack": "^4.41.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-plugin-router": "^4.0.0",
+    "@vue/cli-plugin-unit-jest": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "husky": ">=1",
+    "lint-staged": "^9.5.0",
+    "node-sass": "^4.12.0",
+    "replace": "^1.1.1",
+    "sass": "^1.19.0",
+    "sass-loader": "^8.0.0",
+    "vue-cli-plugin-vuetify": "^2.0.2",
+    "vue-template-compiler": "^2.6.10",
+    "vuetify-loader": "^1.3.0"
+  },
+  "lint-staged": {
+    "*": [
+      "replace '\r\n' '\n'"
+    ],
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

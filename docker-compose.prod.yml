@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  frontend:
+    image: cellphaser/frontend
+    container_name: cellphaser-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.release
+    volumes:
+      - ./frontend:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 8080:5000
+  
+  backend:
+    image: cellphaser/backend
+    container_name: cellphaser-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.release
+    volumes:
+      - ./backend:/usr/src/app
+      - /media/storage:/media/storage
+    ports:
+      - 3000:8000
+

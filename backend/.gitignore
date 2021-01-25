@@ -1,0 +1,14 @@
+# Virtualenv
+bin/
+lib/
+share/
+pyvenv.cfg
+
+# Caches
+cache/
+**/__pycache__/
+
+# Others
+media/
+db.sqlite3
+.env
